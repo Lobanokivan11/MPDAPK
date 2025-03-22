@@ -6,7 +6,7 @@ on:
   - cron: "0 * * * *"
 
 jobs:
-  start_building_gmscore:
+  start_building_mpd:
     runs-on: ubuntu-22.04
     permissions: write-all
     steps:
