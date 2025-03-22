@@ -10,9 +10,8 @@ cd -
 cd ./android
 export JAVA_HOME=$JAVA_HOME_17_X64
 ./gradlew --no-daemon --stacktrace assembleArm64-v8aDebug
-ls -lAR app/build/outputs/apk
 mkdir ../../output
-cp app/build/outputs/apk/*.apk ../../output
+cp app/build/outputs/apk/arm64-v8a/debug/*.apk ../../output
 zipalign -p 4 ../../output/*.apk ../../output/aligned.apk
 apksigner sign --ks-key-alias lob --ks ../sign.keystore --ks-pass pass:369852 --key-pass pass:369852 ../../output/aligned.apk
 mkdir ../../prebuilt
