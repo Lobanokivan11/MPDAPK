@@ -13,6 +13,6 @@ export JAVA_HOME=$JAVA_HOME_17_X64
 mkdir ../../output
 cp app/build/outputs/apk/arm64-v8a/debug/*.apk ../../output
 zipalign -p 4 ../../output/*.apk ../../output/aligned.apk
-apksigner sign --ks-key-alias lob --ks ../sign.keystore --ks-pass pass:369852 --key-pass pass:369852 ../../output/aligned.apk
+apksigner sign --ks-key-alias lob --ks ../../sign.keystore --ks-pass pass:369852 --key-pass pass:369852 ../../output/aligned.apk
 mkdir ../../prebuilt
 cp ../../output/aligned.apk ../../prebuilt/mpd.apk
