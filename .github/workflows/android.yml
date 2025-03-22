@@ -64,3 +64,11 @@ jobs:
         overwrite: true
         body: "MPD RELEASE"
         file_glob: true
+    - name: Actions Ntfy
+      run: |
+        curl \
+          -u ${{ secrets.NTFY_CRED }} \
+          -H "Title: XenonRecomp and XenosRecomp Is Updated" \
+          -H "Content-Type: text/plain" \
+          -d $'Repo: ${{ github.repository }}\nCommit: ${{ github.sha }}\nRef: ${{ github.ref }}\nStatus: ${{ job.status}}' \
+          ${{ secrets.NTFY_URL }}
