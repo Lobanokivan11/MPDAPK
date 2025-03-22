@@ -10,6 +10,7 @@ cd -
 cd ./android
 export JAVA_HOME=$JAVA_HOME_17_X64
 ./gradlew --no-daemon --stacktrace assembleDebug
+ls -lAR build/outputs/apk
 mkdir ../../output
 cp build/outputs/apk/*.apk ../../output
 zipalign -p 4 ../../output/*.apk ../../output/aligned.apk
