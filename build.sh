@@ -6,7 +6,7 @@ git clone https://github.com/MusicPlayerDaemon/MPD.git input
 cd input
 mkdir -p output/android
 cd ./output/android
-python3 ../../android/build.py $ANDROID_SDK_ROOT $ANDROID_NDK_HOME arm64-v8a --buildtype=debugoptimized -Db_ndebug=true -Did3tag=enabled -Dchromaprint=disabled -Dwrap_mode=forcefallback -Dsqlite=enabled -Dzeroconf=bonjour -Dlibmpdclient=enabled -Dipv6=enabled -Dwebdav=enabled -Dqobuz=enabled
+python3 ../../android/build.py $ANDROID_SDK_ROOT $ANDROID_NDK_HOME arm64-v8a --buildtype=debugoptimized -Db_ndebug=true -Did3tag=enabled -Dwrap_mode=forcefallback -Dsqlite=enabled -Dlibmpdclient=enabled -Dipv6=enabled -Dwebdav=enabled -Dqobuz=enabled
 cd -
 cd ./android
 export JAVA_HOME=$JAVA_HOME_17_X64
